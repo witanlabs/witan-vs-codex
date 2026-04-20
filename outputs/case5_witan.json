@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "tsv": "D2|Food\nD3|Rent\nD4|Supplies\nD5|Travel",
+    "values": [
+      "Food",
+      "Rent",
+      "Supplies",
+      "Travel",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Summary!D2:D5"
+    },
+    {
+      "operation": "write",
+      "address": "Summary!D2"
+    }
+  ],
+  "revision_id": "SSy.H56kUAAgOe0vfnFPdsgZEPMnWW9e"
+}

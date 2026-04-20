@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "sheets": [
+      {
+        "address": "Formulas!A1:H19",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 19,
+          "col": 8
+        },
+        "rows": 19,
+        "cols": 8,
+        "sheet": "Formulas"
+      }
+    ],
+    "firstSheet": "Formulas",
+    "cell": {
+      "address": "Formulas!B3",
+      "sheet": "Formulas",
+      "row": 3,
+      "col": 2,
+      "colLetter": "B",
+      "value": 4,
+      "text": "4",
+      "formula": null,
+      "format": "General",
+      "numberType": "number",
+      "type": "number",
+      "visibility": "visible",
+      "context": null
+    }
+  },
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Formulas!B3"
+    }
+  ]
+}

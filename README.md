@@ -1,5 +1,12 @@
 # witan xlsx exec vs codex spreadsheet tooling — 8 reproducible test cases
 
+> [!NOTE]
+> **Scope.** A handful of examples showing places where `witan xlsx exec` has wider Excel
+> compatibility than Codex's bundled spreadsheet tooling — what each tool does
+> when an agent asks it to perform a realistic Excel task. **Not** meant as a
+> comprehensive feature list or bug list of either tool; just some concrete
+> cases reproduced end-to-end.
+
 All cases tested 2026-04-20 against witan CLI 0.9.0 (API v2.19.0),
 `@oai/artifact-tool` 2.6.9, xlwings 0.35.1, and Microsoft Excel for Mac
 (macOS Darwin 25.3.0). Excel is used only as ground truth via xlwings
@@ -7,9 +14,11 @@ automation. Codex workbook edits are exercised through the bundled Node runtime.
 
 All fixtures, scripts, and outputs live under `~/dev/witan-vs-codex/`.
 
-Cases 2-7 reuse the same fixtures and Witan baselines as the sibling
-comparison in `~/dev/witan-vs-openpyxl/`. Cases 8-10 add Codex-specific and
-Witan-specific comparison outputs in this repo.
+Cases 2-7 started from the same source scenarios as the sibling comparison in
+`~/dev/witan-vs-openpyxl/`, but this repo now carries its own local fixtures,
+Witan scripts, and baseline outputs for them as well. Cases 8-10 add the
+Codex-specific and Witan-specific comparison outputs built directly in this
+repo.
 
 ## Summary
 

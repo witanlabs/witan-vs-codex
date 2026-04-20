@@ -1,0 +1,91 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "before": [
+      {
+        "address": "Data!B2",
+        "thread": {
+          "resolved": true,
+          "comments": [
+            {
+              "authorId": "{52D9DDDB-AD44-4CFD-AF47-F032CF730657}",
+              "text": "Initial balance confirmed",
+              "createdAt": "2026-04-20T15:23:28.7838911Z"
+            }
+          ]
+        }
+      },
+      {
+        "address": "Data!C2",
+        "thread": {
+          "resolved": false,
+          "comments": [
+            {
+              "authorId": "{C26F7ABD-FB83-47E7-8EE8-2D411760F12A}",
+              "text": "Needs follow-up on Q3 close",
+              "createdAt": "2026-04-20T15:23:28.7839673Z"
+            }
+          ]
+        }
+      },
+      {
+        "address": "Data!B3",
+        "thread": null
+      }
+    ],
+    "after": [
+      {
+        "address": "Data!B2",
+        "thread": {
+          "resolved": true,
+          "comments": [
+            {
+              "authorId": "{52D9DDDB-AD44-4CFD-AF47-F032CF730657}",
+              "text": "Initial balance confirmed",
+              "createdAt": "2026-04-20T15:23:28.7838911Z"
+            }
+          ]
+        }
+      },
+      {
+        "address": "Data!C2",
+        "thread": {
+          "resolved": false,
+          "comments": [
+            {
+              "authorId": "{C26F7ABD-FB83-47E7-8EE8-2D411760F12A}",
+              "text": "Needs follow-up on Q3 close",
+              "createdAt": "2026-04-20T15:23:28.7839673Z"
+            }
+          ]
+        }
+      },
+      {
+        "address": "Data!B3",
+        "thread": {
+          "resolved": true,
+          "comments": [
+            {
+              "authorId": "{AE9F75F1-D16E-48CF-8A1C-F16A5969A9D8}",
+              "text": "Verified against ledger",
+              "createdAt": "2026-04-20T15:23:37.9166003Z"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Data!B2:C2"
+    },
+    {
+      "operation": "write",
+      "address": "Data!B3"
+    }
+  ],
+  "revision_id": "2njsRHIwgOcPps3mziWvS4F_FRhxJH6v"
+}

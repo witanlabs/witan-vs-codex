@@ -1,0 +1,128 @@
+{
+  "validatedAt": "2026-04-20T15:23:51.632691+00:00",
+  "results": [
+    {
+      "case": "case2",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case2_witan.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Inputs",
+          "Model"
+        ],
+        "inputs": {
+          "B4": {
+            "value": 0.2,
+            "formula": "0.2"
+          }
+        },
+        "model": {
+          "B3": {
+            "value": 49999.999999851054,
+            "formula": "=Model!B1-Model!B2-Model!B4"
+          },
+          "B4": {
+            "value": 9999.999999970212,
+            "formula": "=Model!B3*Inputs!B4"
+          },
+          "B6": {
+            "value": 14999.999999955315,
+            "formula": "=Model!B5*Inputs!B3"
+          },
+          "B7": {
+            "value": 34999.999999895736,
+            "formula": "=Model!B5-Model!B6"
+          }
+        }
+      }
+    },
+    {
+      "case": "case4",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case4_witan.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Data"
+        ],
+        "data": {
+          "A1:C3": {
+            "A1": {
+              "value": "Account",
+              "formula": "Account"
+            },
+            "B1": {
+              "value": "Balance",
+              "formula": "Balance"
+            },
+            "C1": {
+              "value": "Status",
+              "formula": "Status"
+            },
+            "A2": {
+              "value": "Cash",
+              "formula": "Cash"
+            },
+            "B2": {
+              "value": 12345.0,
+              "formula": "12345"
+            },
+            "C2": {
+              "value": "Open",
+              "formula": "Open"
+            },
+            "A3": {
+              "value": "AR",
+              "formula": "AR"
+            },
+            "B3": {
+              "value": 67890.0,
+              "formula": "67890"
+            },
+            "C3": {
+              "value": "Open",
+              "formula": "Open"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case5",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case5_witan.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Raw",
+          "Summary"
+        ],
+        "summary": {
+          "D2:D6": {
+            "D2": {
+              "value": "Food",
+              "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13>0))"
+            },
+            "D3": {
+              "value": "Rent",
+              "formula": ""
+            },
+            "D4": {
+              "value": "Supplies",
+              "formula": ""
+            },
+            "D5": {
+              "value": "Travel",
+              "formula": ""
+            },
+            "D6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        }
+      }
+    }
+  ]
+}

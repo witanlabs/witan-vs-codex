@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "before_bonus_rate": 0.1,
+    "before_net_income": 38181.818178,
+    "after_bonus_rate": 0.2,
+    "after_net_income": "35000",
+    "profit": "50000",
+    "bonus": "9999.999999",
+    "tax": "15000",
+    "errors": []
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Model!B7"
+    },
+    {
+      "operation": "write",
+      "address": "Inputs!B4"
+    }
+  ],
+  "revision_id": "V6A_g61T2ZdUQk_enEuxwb59Hc5ZSN5."
+}

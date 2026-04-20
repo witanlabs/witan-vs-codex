@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": "D1|Unique pos cats\tE1|\tF1|Count\tG1|Food matches\tH1|Joined\nD2|Food|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE2|\tF2|4|=COUNTA(Summary!D2#)\tG2|1|=COUNTIF(Summary!D2#, \"Food\")\tH2|Food, Rent, Supplies, Travel|=TEXTJOIN(\", \", TRUE, Summary!D2#)\nD3|Rent|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE3|\tF3|\tG3|\tH3|\nD4|Supplies|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE4|\tF4|\tG4|\tH4|\nD5|Travel|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE5|\tF5|\tG5|\tH5|",
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "write",
+      "address": "Raw!A1:B13"
+    },
+    {
+      "operation": "write",
+      "address": "Summary!D1:H5"
+    }
+  ]
+}

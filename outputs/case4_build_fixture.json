@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "b2_thread": {
+      "resolved": true,
+      "comments": [
+        {
+          "authorId": "{52D9DDDB-AD44-4CFD-AF47-F032CF730657}",
+          "text": "Initial balance confirmed",
+          "createdAt": "2026-04-20T15:23:28.7838911Z"
+        }
+      ]
+    },
+    "c2_thread": {
+      "resolved": false,
+      "comments": [
+        {
+          "authorId": "{C26F7ABD-FB83-47E7-8EE8-2D411760F12A}",
+          "text": "Needs follow-up on Q3 close",
+          "createdAt": "2026-04-20T15:23:28.7839673Z"
+        }
+      ]
+    }
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Data!B2:C2"
+    },
+    {
+      "operation": "write",
+      "address": "Data!A1:C3"
+    }
+  ]
+}

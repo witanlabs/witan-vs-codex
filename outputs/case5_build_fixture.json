@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": "A1|Category\tB1|Amount\nA2|Food\tB2|120\nA3|Travel\tB3|-50\nA4|Rent\tB4|1500\nA5|Food\tB5|80\nA6|Supplies\tB6|45\nA7|Travel\tB7|200\nA8|Rent\tB8|1500\nA9|Food\tB9|60\nA10|Supplies\tB10|0\nA11|Food\tB11|95\nA12|Travel\tB12|-20\nA13|Supplies\tB13|30",
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "write",
+      "address": "Raw!A1:B13"
+    },
+    {
+      "operation": "write",
+      "address": "Summary"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": [
+    100000,
+    40000,
+    54545.45454,
+    5454.545454,
+    54545.45454,
+    16363.636362,
+    38181.818178
+  ],
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Model!B1:B7"
+    },
+    {
+      "operation": "write",
+      "address": "Inputs!A1:B4"
+    },
+    {
+      "operation": "write",
+      "address": "Model!A1:B7"
+    },
+    {
+      "operation": "write",
+      "address": "*"
+    }
+  ]
+}

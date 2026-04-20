@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "tsv": "D1|Unique pos cats\tE1|\tF1|Count\tG1|Food matches\tH1|Joined\nD2|Food|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE2|\tF2|4|=COUNTA(Summary!D2#)\tG2|1|=COUNTIF(Summary!D2#, \"Food\")\tH2|Food, Rent, Supplies, Travel|=TEXTJOIN(\", \", TRUE, Summary!D2#)\nD3|Rent|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE3|\tF3|\tG3|\tH3|\nD4|Supplies|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE4|\tF4|\tG4|\tH4|\nD5|Travel|=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))\tE5|\tF5|\tG5|\tH5|",
+    "cells": {
+      "Summary!D2": {
+        "value": "Food",
+        "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))"
+      },
+      "Summary!D3": {
+        "value": "Rent",
+        "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))"
+      },
+      "Summary!D4": {
+        "value": "Supplies",
+        "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))"
+      },
+      "Summary!D5": {
+        "value": "Travel",
+        "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13\u003e0))"
+      },
+      "Summary!F2": {
+        "value": 4,
+        "formula": "=COUNTA(Summary!D2#)"
+      },
+      "Summary!G2": {
+        "value": 1,
+        "formula": "=COUNTIF(Summary!D2#, \"Food\")"
+      },
+      "Summary!H2": {
+        "value": "Food, Rent, Supplies, Travel",
+        "formula": "=TEXTJOIN(\", \", TRUE, Summary!D2#)"
+      }
+    }
+  },
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Summary!D1:H5"
+    }
+  ]
+}
