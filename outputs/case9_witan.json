@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "steps": [
+      {
+        "label": "before",
+        "qty": {
+          "address": "Summary!B2",
+          "sheet": "Summary",
+          "row": 2,
+          "col": 2,
+          "colLetter": "B",
+          "value": 10,
+          "text": "10",
+          "formula": "=SUM(Data!B2:B5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "price": {
+          "address": "Summary!B3",
+          "sheet": "Summary",
+          "row": 3,
+          "col": 2,
+          "colLetter": "B",
+          "value": 100,
+          "text": "100",
+          "formula": "=SUM(Data!C2:C5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "spill": "E2|A|=TRANSPOSE(Data!A2:C5)\tF2|B|=TRANSPOSE(Data!A2:C5)\tG2|C|=TRANSPOSE(Data!A2:C5)\tH2|D|=TRANSPOSE(Data!A2:C5)\tI2|\tJ2|\nE3|1|=TRANSPOSE(Data!A2:C5)\tF3|2|=TRANSPOSE(Data!A2:C5)\tG3|3|=TRANSPOSE(Data!A2:C5)\tH3|4|=TRANSPOSE(Data!A2:C5)\tI3|\tJ3|\nE4|10|=TRANSPOSE(Data!A2:C5)\tF4|20|=TRANSPOSE(Data!A2:C5)\tG4|30|=TRANSPOSE(Data!A2:C5)\tH4|40|=TRANSPOSE(Data!A2:C5)\tI4|\tJ4|\nE5|\tF5|\tG5|\tH5|\tI5|\tJ5|\nE6|\tF6|\tG6|\tH6|\tI6|\tJ6|",
+        "data": "A1|Item\tB1|Qty\tC1|Price\tD1|\nA2|A\tB2|1\tC2|10\tD2|\nA3|B\tB3|2\tC3|20\tD3|\nA4|C\tB4|3\tC4|30\tD4|\nA5|D\tB5|4\tC5|40\tD5|\nA6|\tB6|\tC6|\tD6|"
+      },
+      {
+        "label": "after_insert_row",
+        "qty": {
+          "address": "Summary!B2",
+          "sheet": "Summary",
+          "row": 2,
+          "col": 2,
+          "colLetter": "B",
+          "value": 20,
+          "text": "20",
+          "formula": "=SUM(Data!B2:B6)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "price": {
+          "address": "Summary!B3",
+          "sheet": "Summary",
+          "row": 3,
+          "col": 2,
+          "colLetter": "B",
+          "value": 200,
+          "text": "200",
+          "formula": "=SUM(Data!C2:C6)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "spill": "E2|A|=TRANSPOSE(Data!A2:C6)\tF2|B|=TRANSPOSE(Data!A2:C6)\tG2|X|=TRANSPOSE(Data!A2:C6)\tH2|C|=TRANSPOSE(Data!A2:C6)\tI2|D|=TRANSPOSE(Data!A2:C6)\tJ2|\nE3|1|=TRANSPOSE(Data!A2:C6)\tF3|2|=TRANSPOSE(Data!A2:C6)\tG3|10|=TRANSPOSE(Data!A2:C6)\tH3|3|=TRANSPOSE(Data!A2:C6)\tI3|4|=TRANSPOSE(Data!A2:C6)\tJ3|\nE4|10|=TRANSPOSE(Data!A2:C6)\tF4|20|=TRANSPOSE(Data!A2:C6)\tG4|100|=TRANSPOSE(Data!A2:C6)\tH4|30|=TRANSPOSE(Data!A2:C6)\tI4|40|=TRANSPOSE(Data!A2:C6)\tJ4|\nE5|\tF5|\tG5|\tH5|\tI5|\tJ5|\nE6|\tF6|\tG6|\tH6|\tI6|\tJ6|",
+        "data": "A1|Item\tB1|Qty\tC1|Price\tD1|\nA2|A\tB2|1\tC2|10\tD2|\nA3|B\tB3|2\tC3|20\tD3|\nA4|X\tB4|10\tC4|100\tD4|\nA5|C\tB5|3\tC5|30\tD5|\nA6|D\tB6|4\tC6|40\tD6|"
+      },
+      {
+        "label": "after_insert_col",
+        "qty": {
+          "address": "Summary!B2",
+          "sheet": "Summary",
+          "row": 2,
+          "col": 2,
+          "colLetter": "B",
+          "value": 20,
+          "text": "20",
+          "formula": "=SUM(Data!B2:B6)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "price": {
+          "address": "Summary!B3",
+          "sheet": "Summary",
+          "row": 3,
+          "col": 2,
+          "colLetter": "B",
+          "value": 200,
+          "text": "200",
+          "formula": "=SUM(Data!D2:D6)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "spill": "E2|A|=TRANSPOSE(Data!A2:D6)\tF2|B|=TRANSPOSE(Data!A2:D6)\tG2|X|=TRANSPOSE(Data!A2:D6)\tH2|C|=TRANSPOSE(Data!A2:D6)\tI2|D|=TRANSPOSE(Data!A2:D6)\tJ2|\nE3|1|=TRANSPOSE(Data!A2:D6)\tF3|2|=TRANSPOSE(Data!A2:D6)\tG3|10|=TRANSPOSE(Data!A2:D6)\tH3|3|=TRANSPOSE(Data!A2:D6)\tI3|4|=TRANSPOSE(Data!A2:D6)\tJ3|\nE4|1000|=TRANSPOSE(Data!A2:D6)\tF4|2000|=TRANSPOSE(Data!A2:D6)\tG4|3000|=TRANSPOSE(Data!A2:D6)\tH4|4000|=TRANSPOSE(Data!A2:D6)\tI4|5000|=TRANSPOSE(Data!A2:D6)\tJ4|\nE5|10|=TRANSPOSE(Data!A2:D6)\tF5|20|=TRANSPOSE(Data!A2:D6)\tG5|100|=TRANSPOSE(Data!A2:D6)\tH5|30|=TRANSPOSE(Data!A2:D6)\tI5|40|=TRANSPOSE(Data!A2:D6)\tJ5|\nE6|\tF6|\tG6|\tH6|\tI6|\tJ6|",
+        "data": "A1|Item\tB1|Qty\tC1|Adj\tD1|Price\nA2|A\tB2|1\tC2|1000\tD2|10\nA3|B\tB3|2\tC3|2000\tD3|20\nA4|X\tB4|10\tC4|3000\tD4|100\nA5|C\tB5|3\tC5|4000\tD5|30\nA6|D\tB6|4\tC6|5000\tD6|40"
+      },
+      {
+        "label": "after_delete_row",
+        "qty": {
+          "address": "Summary!B2",
+          "sheet": "Summary",
+          "row": 2,
+          "col": 2,
+          "colLetter": "B",
+          "value": 17,
+          "text": "17",
+          "formula": "=SUM(Data!B2:B5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "price": {
+          "address": "Summary!B3",
+          "sheet": "Summary",
+          "row": 3,
+          "col": 2,
+          "colLetter": "B",
+          "value": 170,
+          "text": "170",
+          "formula": "=SUM(Data!D2:D5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "spill": "E2|A|=TRANSPOSE(Data!A2:D5)\tF2|B|=TRANSPOSE(Data!A2:D5)\tG2|X|=TRANSPOSE(Data!A2:D5)\tH2|D|=TRANSPOSE(Data!A2:D5)\tI2|\tJ2|\nE3|1|=TRANSPOSE(Data!A2:D5)\tF3|2|=TRANSPOSE(Data!A2:D5)\tG3|10|=TRANSPOSE(Data!A2:D5)\tH3|4|=TRANSPOSE(Data!A2:D5)\tI3|\tJ3|\nE4|1000|=TRANSPOSE(Data!A2:D5)\tF4|2000|=TRANSPOSE(Data!A2:D5)\tG4|3000|=TRANSPOSE(Data!A2:D5)\tH4|5000|=TRANSPOSE(Data!A2:D5)\tI4|\tJ4|\nE5|10|=TRANSPOSE(Data!A2:D5)\tF5|20|=TRANSPOSE(Data!A2:D5)\tG5|100|=TRANSPOSE(Data!A2:D5)\tH5|40|=TRANSPOSE(Data!A2:D5)\tI5|\tJ5|\nE6|\tF6|\tG6|\tH6|\tI6|\tJ6|",
+        "data": "A1|Item\tB1|Qty\tC1|Adj\tD1|Price\nA2|A\tB2|1\tC2|1000\tD2|10\nA3|B\tB3|2\tC3|2000\tD3|20\nA4|X\tB4|10\tC4|3000\tD4|100\nA5|D\tB5|4\tC5|5000\tD5|40\nA6|\tB6|\tC6|\tD6|"
+      },
+      {
+        "label": "after_delete_col",
+        "qty": {
+          "address": "Summary!B2",
+          "sheet": "Summary",
+          "row": 2,
+          "col": 2,
+          "colLetter": "B",
+          "value": 17,
+          "text": "17",
+          "formula": "=SUM(Data!B2:B5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "price": {
+          "address": "Summary!B3",
+          "sheet": "Summary",
+          "row": 3,
+          "col": 2,
+          "colLetter": "B",
+          "value": 170,
+          "text": "170",
+          "formula": "=SUM(Data!C2:C5)",
+          "format": "General",
+          "numberType": "number",
+          "type": "number",
+          "visibility": "visible",
+          "context": null
+        },
+        "spill": "E2|A|=TRANSPOSE(Data!A2:C5)\tF2|B|=TRANSPOSE(Data!A2:C5)\tG2|X|=TRANSPOSE(Data!A2:C5)\tH2|D|=TRANSPOSE(Data!A2:C5)\tI2|\tJ2|\nE3|1|=TRANSPOSE(Data!A2:C5)\tF3|2|=TRANSPOSE(Data!A2:C5)\tG3|10|=TRANSPOSE(Data!A2:C5)\tH3|4|=TRANSPOSE(Data!A2:C5)\tI3|\tJ3|\nE4|10|=TRANSPOSE(Data!A2:C5)\tF4|20|=TRANSPOSE(Data!A2:C5)\tG4|100|=TRANSPOSE(Data!A2:C5)\tH4|40|=TRANSPOSE(Data!A2:C5)\tI4|\tJ4|\nE5|\tF5|\tG5|\tH5|\tI5|\tJ5|\nE6|\tF6|\tG6|\tH6|\tI6|\tJ6|",
+        "data": "A1|Item\tB1|Qty\tC1|Price\tD1|\nA2|A\tB2|1\tC2|10\tD2|\nA3|B\tB3|2\tC3|20\tD3|\nA4|X\tB4|10\tC4|100\tD4|\nA5|D\tB5|4\tC5|40\tD5|\nA6|\tB6|\tC6|\tD6|"
+      }
+    ]
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Summary!B2:B3"
+    },
+    {
+      "operation": "read",
+      "address": "Summary!E2:H4"
+    },
+    {
+      "operation": "read",
+      "address": "Data!A1:C5"
+    },
+    {
+      "operation": "write",
+      "address": "Data!B1:C5"
+    },
+    {
+      "operation": "write",
+      "address": "Data!A4:C5"
+    }
+  ],
+  "revision_id": "msyquizYm.8Xmz8XdIeRnSdBQxgrqfb3"
+}

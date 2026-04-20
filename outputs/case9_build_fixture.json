@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "sheets": [
+      {
+        "address": "Data!A1:C5",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 5,
+          "col": 3
+        },
+        "rows": 5,
+        "cols": 3,
+        "sheet": "Data",
+        "dependents": [
+          "Summary"
+        ]
+      },
+      {
+        "address": "Summary!B1:H4",
+        "from": {
+          "row": 1,
+          "col": 2
+        },
+        "to": {
+          "row": 4,
+          "col": 8
+        },
+        "rows": 4,
+        "cols": 7,
+        "sheet": "Summary",
+        "precedents": [
+          "Data"
+        ]
+      }
+    ],
+    "summary": "B1|Qty sum\tC1|\tD1|\tE1|Transposed Data\tF1|\tG1|\tH1|\tI1|\tJ1|\nB2|10|=SUM(Data!B2:B5)\tC2|\tD2|\tE2|A|=TRANSPOSE(Data!A2:C5)\tF2|B|=TRANSPOSE(Data!A2:C5)\tG2|C|=TRANSPOSE(Data!A2:C5)\tH2|D|=TRANSPOSE(Data!A2:C5)\tI2|\tJ2|\nB3|100|=SUM(Data!C2:C5)\tC3|\tD3|\tE3|1|=TRANSPOSE(Data!A2:C5)\tF3|2|=TRANSPOSE(Data!A2:C5)\tG3|3|=TRANSPOSE(Data!A2:C5)\tH3|4|=TRANSPOSE(Data!A2:C5)\tI3|\tJ3|\nB4|\tC4|\tD4|\tE4|10|=TRANSPOSE(Data!A2:C5)\tF4|20|=TRANSPOSE(Data!A2:C5)\tG4|30|=TRANSPOSE(Data!A2:C5)\tH4|40|=TRANSPOSE(Data!A2:C5)\tI4|\tJ4|\nB5|\tC5|\tD5|\tE5|\tF5|\tG5|\tH5|\tI5|\tJ5|"
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "write",
+      "address": "Data!A1:C5"
+    },
+    {
+      "operation": "write",
+      "address": "Summary!B1:H4"
+    }
+  ]
+}

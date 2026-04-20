@@ -1,0 +1,120 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "sheets": [
+      {
+        "address": "Data!A1:C5",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 5,
+          "col": 3
+        },
+        "rows": 5,
+        "cols": 3,
+        "sheet": "Data"
+      },
+      {
+        "address": "Jan!A1:B2",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 2,
+          "col": 2
+        },
+        "rows": 2,
+        "cols": 2,
+        "sheet": "Jan"
+      },
+      {
+        "address": "Feb!A1:B2",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 2,
+          "col": 2
+        },
+        "rows": 2,
+        "cols": 2,
+        "sheet": "Feb"
+      },
+      {
+        "address": "Mar!A1:B2",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 2,
+          "col": 2
+        },
+        "rows": 2,
+        "cols": 2,
+        "sheet": "Mar"
+      },
+      {
+        "address": "Config!A1:B2",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 2,
+          "col": 2
+        },
+        "rows": 2,
+        "cols": 2,
+        "sheet": "Config"
+      },
+      {
+        "address": "Summary!A1:C18",
+        "from": {
+          "row": 1,
+          "col": 1
+        },
+        "to": {
+          "row": 18,
+          "col": 3
+        },
+        "rows": 18,
+        "cols": 3,
+        "sheet": "Summary"
+      }
+    ],
+    "summary": "A1|Formula\tB1|Expected\tC1|Actual\nA2|TEXT multi-section accounting\tB2|($1,234.57)\tC2|\nA3|TEXT conditional percent sections\tB3|37.5%\tC3|\nA4|3D SUM\tB4|60\tC4|\nA5|OFFSET SUM\tB5|10\tC5|\nA6|INDIRECT SUM\tB6|10\tC6|\nA7|MAP double SUM\tB7|20\tC7|\nA8|REDUCE square SUM\tB8|30\tC8|\nA9|LET qty*price SUM\tB9|300\tC9|\nA10|XLOOKUP price for C\tB10|30\tC10|\nA11|INDEX/XMATCH price for D\tB11|40\tC11|\nA12|TEXTJOIN(MAP(...))\tB12|A:1,B:2,C:3,D:4\tC12|\nA13|SUMPRODUCT filtered qty\tB13|9\tC13|\nA14|SUM(SEQUENCE(3))\tB14|6\tC14|\nA15|SUM(BYROW(...))\tB15|110\tC15|\nA16|SUM(CHOOSECOLS(...))\tB16|10\tC16|\nA17|SUM(TAKE(...,2))\tB17|3\tC17|\nA18|SUM(DROP(...,2))\tB18|7\tC18|"
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "write",
+      "address": "Data!A1:C5"
+    },
+    {
+      "operation": "write",
+      "address": "Jan!A1:B2"
+    },
+    {
+      "operation": "write",
+      "address": "Feb!A1:B2"
+    },
+    {
+      "operation": "write",
+      "address": "Mar!A1:B2"
+    },
+    {
+      "operation": "write",
+      "address": "Config!A1:B2"
+    },
+    {
+      "operation": "write",
+      "address": "Summary!A1:C18"
+    }
+  ]
+}

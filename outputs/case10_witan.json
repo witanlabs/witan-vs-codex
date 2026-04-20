@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "before": {
+      "label": "before",
+      "rows": [
+        {
+          "key": "text_multisection_accounting",
+          "label": "TEXT multi-section accounting",
+          "expected": "($1,234.57)",
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "text_conditional_percent_sections",
+          "label": "TEXT conditional percent sections",
+          "expected": "37.5%",
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "ref_3d_sum",
+          "label": "3D SUM",
+          "expected": 60,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "offset_sum",
+          "label": "OFFSET SUM",
+          "expected": 10,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "indirect_sum",
+          "label": "INDIRECT SUM",
+          "expected": 10,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "map_double_sum",
+          "label": "MAP double SUM",
+          "expected": 20,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "reduce_square_sum",
+          "label": "REDUCE square SUM",
+          "expected": 30,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "let_sumproduct",
+          "label": "LET qty*price SUM",
+          "expected": 300,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "xlookup_price_c",
+          "label": "XLOOKUP price for C",
+          "expected": 30,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "index_xmatch_price_d",
+          "label": "INDEX/XMATCH price for D",
+          "expected": 40,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "textjoin_map",
+          "label": "TEXTJOIN(MAP(...))",
+          "expected": "A:1,B:2,C:3,D:4",
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "sumproduct_filtered_qty",
+          "label": "SUMPRODUCT filtered qty",
+          "expected": 9,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "sequence_sum",
+          "label": "SUM(SEQUENCE(3))",
+          "expected": 6,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "byrow_sum",
+          "label": "SUM(BYROW(...))",
+          "expected": 110,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "choosecols_sum_qty",
+          "label": "SUM(CHOOSECOLS(...))",
+          "expected": 10,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "take_sum_first2",
+          "label": "SUM(TAKE(...,2))",
+          "expected": 3,
+          "formula": null,
+          "value": null
+        },
+        {
+          "key": "drop_sum_last2",
+          "label": "SUM(DROP(...,2))",
+          "expected": 7,
+          "formula": null,
+          "value": null
+        }
+      ],
+      "table": "A1|Formula\tB1|Expected\tC1|Actual\nA2|TEXT multi-section accounting\tB2|($1,234.57)\tC2|\nA3|TEXT conditional percent sections\tB3|37.5%\tC3|\nA4|3D SUM\tB4|60\tC4|\nA5|OFFSET SUM\tB5|10\tC5|\nA6|INDIRECT SUM\tB6|10\tC6|\nA7|MAP double SUM\tB7|20\tC7|\nA8|REDUCE square SUM\tB8|30\tC8|\nA9|LET qty*price SUM\tB9|300\tC9|\nA10|XLOOKUP price for C\tB10|30\tC10|\nA11|INDEX/XMATCH price for D\tB11|40\tC11|\nA12|TEXTJOIN(MAP(...))\tB12|A:1,B:2,C:3,D:4\tC12|\nA13|SUMPRODUCT filtered qty\tB13|9\tC13|\nA14|SUM(SEQUENCE(3))\tB14|6\tC14|\nA15|SUM(BYROW(...))\tB15|110\tC15|\nA16|SUM(CHOOSECOLS(...))\tB16|10\tC16|\nA17|SUM(TAKE(...,2))\tB17|3\tC17|\nA18|SUM(DROP(...,2))\tB18|7\tC18|"
+    },
+    "after": {
+      "label": "after",
+      "rows": [
+        {
+          "key": "text_multisection_accounting",
+          "label": "TEXT multi-section accounting",
+          "expected": "($1,234.57)",
+          "formula": "=TEXT(-1234.567,\"[Green]$#,##0.00;[Red]($#,##0.00);0.00\")",
+          "value": "($1,234.57)"
+        },
+        {
+          "key": "text_conditional_percent_sections",
+          "label": "TEXT conditional percent sections",
+          "expected": "37.5%",
+          "formula": "=TEXT(0.375,\"[\u003e=1]0.0%;[Red](0.0%);0.0%\")",
+          "value": "37.5%"
+        },
+        {
+          "key": "ref_3d_sum",
+          "label": "3D SUM",
+          "expected": 60,
+          "formula": "=SUM(Jan:Mar!B2)",
+          "value": 60
+        },
+        {
+          "key": "offset_sum",
+          "label": "OFFSET SUM",
+          "expected": 10,
+          "formula": "=SUM(OFFSET(Data!B2,0,0,4,1))",
+          "value": 10
+        },
+        {
+          "key": "indirect_sum",
+          "label": "INDIRECT SUM",
+          "expected": 10,
+          "formula": "=SUM(INDIRECT(Config!B1\u0026\"!\"\u0026Config!B2))",
+          "value": 10
+        },
+        {
+          "key": "map_double_sum",
+          "label": "MAP double SUM",
+          "expected": 20,
+          "formula": "=SUM(MAP(Data!B2:B5,LAMBDA(x,x*2)))",
+          "value": 20
+        },
+        {
+          "key": "reduce_square_sum",
+          "label": "REDUCE square SUM",
+          "expected": 30,
+          "formula": "=REDUCE(0,Data!B2:B5,LAMBDA(a,x,a+x^2))",
+          "value": 30
+        },
+        {
+          "key": "let_sumproduct",
+          "label": "LET qty*price SUM",
+          "expected": 300,
+          "formula": "=LET(q,Data!B2:B5,p,Data!C2:C5,SUM(q*p))",
+          "value": 300
+        },
+        {
+          "key": "xlookup_price_c",
+          "label": "XLOOKUP price for C",
+          "expected": 30,
+          "formula": "=XLOOKUP(\"C\",Data!A2:A5,Data!C2:C5)",
+          "value": 30
+        },
+        {
+          "key": "index_xmatch_price_d",
+          "label": "INDEX/XMATCH price for D",
+          "expected": 40,
+          "formula": "=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))",
+          "value": "#VALUE!"
+        },
+        {
+          "key": "textjoin_map",
+          "label": "TEXTJOIN(MAP(...))",
+          "expected": "A:1,B:2,C:3,D:4",
+          "formula": "=TEXTJOIN(\",\",TRUE,MAP(Data!A2:A5,Data!B2:B5,LAMBDA(item,qty,item\u0026\":\"\u0026qty)))",
+          "value": "A:1,B:2,C:3,D:4"
+        },
+        {
+          "key": "sumproduct_filtered_qty",
+          "label": "SUMPRODUCT filtered qty",
+          "expected": 9,
+          "formula": "=SUMPRODUCT((Data!C2:C5\u003e15)*Data!B2:B5)",
+          "value": 9
+        },
+        {
+          "key": "sequence_sum",
+          "label": "SUM(SEQUENCE(3))",
+          "expected": 6,
+          "formula": "=SUM(SEQUENCE(3))",
+          "value": 6
+        },
+        {
+          "key": "byrow_sum",
+          "label": "SUM(BYROW(...))",
+          "expected": 110,
+          "formula": "=SUM(BYROW(Data!B2:C5,LAMBDA(r,SUM(r))))",
+          "value": 110
+        },
+        {
+          "key": "choosecols_sum_qty",
+          "label": "SUM(CHOOSECOLS(...))",
+          "expected": 10,
+          "formula": "=SUM(CHOOSECOLS(Data!B2:C5,1))",
+          "value": 10
+        },
+        {
+          "key": "take_sum_first2",
+          "label": "SUM(TAKE(...,2))",
+          "expected": 3,
+          "formula": "=SUM(TAKE(Data!B2:B5,2))",
+          "value": 3
+        },
+        {
+          "key": "drop_sum_last2",
+          "label": "SUM(DROP(...,2))",
+          "expected": 7,
+          "formula": "=SUM(DROP(Data!B2:B5,2))",
+          "value": 7
+        }
+      ],
+      "table": "A1|Formula\tB1|Expected\tC1|Actual\nA2|TEXT multi-section accounting\tB2|($1,234.57)\tC2|($1,234.57)|=TEXT(-1234.567,\"[Green]$#,##0.00;[Red]($#,##0.00);0.00\")\nA3|TEXT conditional percent sections\tB3|37.5%\tC3|37.5%|=TEXT(0.375,\"[\u003e=1]0.0%;[Red](0.0%);0.0%\")\nA4|3D SUM\tB4|60\tC4|60|=SUM(Jan:Mar!B2)\nA5|OFFSET SUM\tB5|10\tC5|10|=SUM(OFFSET(Data!B2,0,0,4,1))\nA6|INDIRECT SUM\tB6|10\tC6|10|=SUM(INDIRECT(Config!B1\u0026\"!\"\u0026Config!B2))\nA7|MAP double SUM\tB7|20\tC7|20|=SUM(MAP(Data!B2:B5,LAMBDA(x,x*2)))\nA8|REDUCE square SUM\tB8|30\tC8|30|=REDUCE(0,Data!B2:B5,LAMBDA(a,x,a+x^2))\nA9|LET qty*price SUM\tB9|300\tC9|300|=LET(q,Data!B2:B5,p,Data!C2:C5,SUM(q*p))\nA10|XLOOKUP price for C\tB10|30\tC10|30|=XLOOKUP(\"C\",Data!A2:A5,Data!C2:C5)\nA11|INDEX/XMATCH price for D\tB11|40\tC11|#VALUE!|=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))\nA12|TEXTJOIN(MAP(...))\tB12|A:1,B:2,C:3,D:4\tC12|A:1,B:2,C:3,D:4|=TEXTJOIN(\",\",TRUE,MAP(Data!A2:A5,Data!B2:B5,LAMBDA(item,qty,item\u0026\":\"\u0026qty)))\nA13|SUMPRODUCT filtered qty\tB13|9\tC13|9|=SUMPRODUCT((Data!C2:C5\u003e15)*Data!B2:B5)\nA14|SUM(SEQUENCE(3))\tB14|6\tC14|6|=SUM(SEQUENCE(3))\nA15|SUM(BYROW(...))\tB15|110\tC15|110|=SUM(BYROW(Data!B2:C5,LAMBDA(r,SUM(r))))\nA16|SUM(CHOOSECOLS(...))\tB16|10\tC16|10|=SUM(CHOOSECOLS(Data!B2:C5,1))\nA17|SUM(TAKE(...,2))\tB17|3\tC17|3|=SUM(TAKE(Data!B2:B5,2))\nA18|SUM(DROP(...,2))\tB18|7\tC18|7|=SUM(DROP(Data!B2:B5,2))"
+    }
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Summary!A1:C18"
+    },
+    {
+      "operation": "write",
+      "address": "Summary!C2:C18"
+    }
+  ],
+  "revision_id": "_PiWrMACQFgX1RezYRNv1X1HnZqURvLe"
+}

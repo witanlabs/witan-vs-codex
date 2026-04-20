@@ -1,0 +1,72 @@
+{
+  "validatedAt": "2026-04-20T12:01:50.678648+00:00",
+  "artifactResults": "/Users/nuno/dev/witan-vs-codex/outputs/artifact_results.json",
+  "results": [
+    {
+      "name": "case2",
+      "artifactStatus": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case2_codex.xlsx",
+      "excelStatus": "ok",
+      "excel": {
+        "opened": true,
+        "bonusRate": 0.2,
+        "profit": 54545.45454,
+        "bonus": 5454.545454,
+        "netIncome": 38181.818178
+      }
+    },
+    {
+      "name": "case3",
+      "artifactStatus": "error",
+      "outputPath": null,
+      "excelStatus": "skipped",
+      "reason": "FileContainsCorruptedData"
+    },
+    {
+      "name": "case4",
+      "artifactStatus": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case4_codex.xlsx",
+      "excelStatus": "error",
+      "error": "Command failed:\n\t\tOSERROR: -50\n\t\tMESSAGE: Parameter error.\n\t\tCOMMAND: app('/Applications/Microsoft Excel.app', newinstance=(0, 139711797)).open_workbook(workbook_file_name='/Users/nuno/dev/witan-vs-codex/outputs/case4_codex.xlsx', update_links=k.do_not_update_links, read_only=None, format=None, password=None, write_reserved_password=None, ignore_read_only_recommended=None, origin=None, delimiter=None, editable=None, notify=None, converter=None, add_to_mru=None, timeout=-1)"
+    },
+    {
+      "name": "case5",
+      "artifactStatus": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case5_codex.xlsx",
+      "excelStatus": "ok",
+      "excel": {
+        "opened": true,
+        "cells": {
+          "D2": {
+            "value": null,
+            "formula": "=UNIQUE(FILTER(Raw!A2:A13, Raw!B2:B13>0))"
+          },
+          "D3": {
+            "value": null,
+            "formula": ""
+          },
+          "D4": {
+            "value": null,
+            "formula": ""
+          },
+          "D5": {
+            "value": null,
+            "formula": ""
+          },
+          "D6": {
+            "value": null,
+            "formula": ""
+          }
+        },
+        "roundtripPath": "/Users/nuno/dev/witan-vs-codex/outputs/case5_codex_excel_roundtrip.xlsx"
+      }
+    },
+    {
+      "name": "case7",
+      "artifactStatus": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case7_codex.xlsx",
+      "excelStatus": "error",
+      "error": "Command failed:\n\t\tOSERROR: -50\n\t\tMESSAGE: Parameter error.\n\t\tCOMMAND: app('/Applications/Microsoft Excel.app', newinstance=(0, 139711797)).open_workbook(workbook_file_name='/Users/nuno/dev/witan-vs-codex/outputs/case7_codex.xlsx', update_links=k.do_not_update_links, read_only=None, format=None, password=None, write_reserved_password=None, ignore_read_only_recommended=None, origin=None, delimiter=None, editable=None, notify=None, converter=None, add_to_mru=None, timeout=-1)"
+    }
+  ]
+}

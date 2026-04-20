@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "stdout": "",
+  "result": {
+    "before": {
+      "label": "before",
+      "sheets": [
+        {
+          "address": "Data!A1:C4",
+          "from": {
+            "row": 1,
+            "col": 1
+          },
+          "to": {
+            "row": 4,
+            "col": 3
+          },
+          "rows": 4,
+          "cols": 3,
+          "sheet": "Data",
+          "dependents": [
+            "Summary"
+          ]
+        },
+        {
+          "address": "Summary!B1:F4",
+          "from": {
+            "row": 1,
+            "col": 2
+          },
+          "to": {
+            "row": 4,
+            "col": 6
+          },
+          "rows": 4,
+          "cols": 5,
+          "sheet": "Summary",
+          "precedents": [
+            "Data"
+          ]
+        }
+      ],
+      "qty": {
+        "address": "Summary!B2",
+        "sheet": "Summary",
+        "row": 2,
+        "col": 2,
+        "colLetter": "B",
+        "value": 6,
+        "text": "6",
+        "formula": "=SUM(Data!B2:B4)",
+        "format": "General",
+        "numberType": "number",
+        "type": "number",
+        "visibility": "visible",
+        "context": null
+      },
+      "total": {
+        "address": "Summary!B3",
+        "sheet": "Summary",
+        "row": 3,
+        "col": 2,
+        "colLetter": "B",
+        "value": 140,
+        "text": "140",
+        "formula": "=SUMPRODUCT(Data!B2:B4, Data!C2:C4)",
+        "format": "General",
+        "numberType": "number",
+        "type": "number",
+        "visibility": "visible",
+        "context": null
+      },
+      "spill": "D2|A|=TRANSPOSE(Data!A2:C4)\tE2|B|=TRANSPOSE(Data!A2:C4)\tF2|C|=TRANSPOSE(Data!A2:C4)\nD3|1|=TRANSPOSE(Data!A2:C4)\tE3|2|=TRANSPOSE(Data!A2:C4)\tF3|3|=TRANSPOSE(Data!A2:C4)\nD4|10|=TRANSPOSE(Data!A2:C4)\tE4|20|=TRANSPOSE(Data!A2:C4)\tF4|30|=TRANSPOSE(Data!A2:C4)"
+    },
+    "after": {
+      "label": "after",
+      "sheets": [
+        {
+          "address": "Renamed!A1:C4",
+          "from": {
+            "row": 1,
+            "col": 1
+          },
+          "to": {
+            "row": 4,
+            "col": 3
+          },
+          "rows": 4,
+          "cols": 3,
+          "sheet": "Renamed",
+          "dependents": [
+            "Summary"
+          ]
+        },
+        {
+          "address": "Summary!B1:F4",
+          "from": {
+            "row": 1,
+            "col": 2
+          },
+          "to": {
+            "row": 4,
+            "col": 6
+          },
+          "rows": 4,
+          "cols": 5,
+          "sheet": "Summary",
+          "precedents": [
+            "Renamed"
+          ]
+        }
+      ],
+      "qty": {
+        "address": "Summary!B2",
+        "sheet": "Summary",
+        "row": 2,
+        "col": 2,
+        "colLetter": "B",
+        "value": 6,
+        "text": "6",
+        "formula": "=SUM(Renamed!B2:B4)",
+        "format": "General",
+        "numberType": "number",
+        "type": "number",
+        "visibility": "visible",
+        "context": null
+      },
+      "total": {
+        "address": "Summary!B3",
+        "sheet": "Summary",
+        "row": 3,
+        "col": 2,
+        "colLetter": "B",
+        "value": 140,
+        "text": "140",
+        "formula": "=SUMPRODUCT(Renamed!B2:B4, Renamed!C2:C4)",
+        "format": "General",
+        "numberType": "number",
+        "type": "number",
+        "visibility": "visible",
+        "context": null
+      },
+      "spill": "D2|A|=TRANSPOSE(Renamed!A2:C4)\tE2|B|=TRANSPOSE(Renamed!A2:C4)\tF2|C|=TRANSPOSE(Renamed!A2:C4)\nD3|1|=TRANSPOSE(Renamed!A2:C4)\tE3|2|=TRANSPOSE(Renamed!A2:C4)\tF3|3|=TRANSPOSE(Renamed!A2:C4)\nD4|10|=TRANSPOSE(Renamed!A2:C4)\tE4|20|=TRANSPOSE(Renamed!A2:C4)\tF4|30|=TRANSPOSE(Renamed!A2:C4)"
+    }
+  },
+  "writes_detected": true,
+  "accesses": [
+    {
+      "operation": "read",
+      "address": "Summary!B2:B3"
+    },
+    {
+      "operation": "read",
+      "address": "Summary!D2:F4"
+    },
+    {
+      "operation": "write",
+      "address": "*"
+    }
+  ],
+  "revision_id": "Lwabs2fuedII4mQjjuDAhE.SVax9qslU"
+}

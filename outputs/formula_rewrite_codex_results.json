@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-04-20T12:40:32.537Z",
+  "repoRoot": "/Users/nuno/dev/witan-vs-codex",
+  "results": [
+    {
+      "name": "case8",
+      "status": "ok",
+      "fixture": "fixtures/case8_rename_fixture.xlsx",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case8_codex.xlsx",
+      "renameResult": {
+        "idMap": {},
+        "warnings": []
+      },
+      "before": {
+        "sheets": [
+          "Data",
+          "Summary"
+        ],
+        "qtyFormula": "=SUM(Data!B2:B4)",
+        "totalFormula": "=SUMPRODUCT(Data!B2:B4, Data!C2:C4)",
+        "spillAnchorFormula": "=TRANSPOSE(Data!A2:C4)",
+        "spillValues": [
+          [
+            "A",
+            "B",
+            "C"
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            10,
+            20,
+            30
+          ]
+        ]
+      },
+      "after": {
+        "sheets": [
+          "Renamed",
+          "Summary"
+        ],
+        "qtyFormula": "=SUM(Data!B2:B4)",
+        "totalFormula": "=SUMPRODUCT(Data!B2:B4, Data!C2:C4)",
+        "spillAnchorFormula": "=TRANSPOSE(Data!A2:C4)",
+        "spillValues": [
+          [
+            "#REF!",
+            "#REF!",
+            "#REF!"
+          ],
+          [
+            "#REF!",
+            "#REF!",
+            "#REF!"
+          ],
+          [
+            "#REF!",
+            "#REF!",
+            "#REF!"
+          ]
+        ]
+      },
+      "expected": {
+        "qtyFormula": "=SUM(Renamed!B2:B4)",
+        "totalFormula": "=SUMPRODUCT(Renamed!B2:B4, Renamed!C2:C4)",
+        "spillAnchorFormula": "=TRANSPOSE(Renamed!A2:C4)",
+        "spillValues": [
+          [
+            "A",
+            "B",
+            "C"
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            10,
+            20,
+            30
+          ]
+        ]
+      }
+    },
+    {
+      "name": "case9",
+      "status": "ok",
+      "fixture": "fixtures/case9_shift_fixture.xlsx",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case9_codex.xlsx",
+      "applyResults": [
+        {
+          "op": "rows.insert",
+          "result": {
+            "idMap": {},
+            "warnings": [
+              "TODO: rows.insert is not implemented yet."
+            ]
+          }
+        },
+        {
+          "op": "columns.insert",
+          "result": {
+            "idMap": {},
+            "warnings": [
+              "TODO: columns.insert is not implemented yet."
+            ]
+          }
+        },
+        {
+          "op": "rows.delete",
+          "result": {
+            "idMap": {},
+            "warnings": [
+              "TODO: rows.delete is not implemented yet."
+            ]
+          }
+        },
+        {
+          "op": "columns.delete",
+          "result": {
+            "idMap": {},
+            "warnings": [
+              "TODO: columns.delete is not implemented yet."
+            ]
+          }
+        }
+      ],
+      "before": {
+        "qtyFormula": "=SUM(Data!B2:B5)",
+        "priceFormula": "=SUM(Data!C2:C5)",
+        "spillAnchorFormula": "=TRANSPOSE(Data!A2:C5)",
+        "spillValues": [
+          [
+            "A",
+            "B",
+            "C",
+            "D",
+            null,
+            null
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            null,
+            null
+          ],
+          [
+            10,
+            20,
+            30,
+            40,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "dataValues": [
+          [
+            "Item",
+            "Qty",
+            "Price",
+            null
+          ],
+          [
+            "A",
+            1,
+            10,
+            null
+          ],
+          [
+            "B",
+            2,
+            20,
+            null
+          ],
+          [
+            "C",
+            3,
+            30,
+            null
+          ],
+          [
+            "D",
+            4,
+            40,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "after": {
+        "qtyFormula": "=SUM(Data!B2:B5)",
+        "priceFormula": "=SUM(Data!C2:C5)",
+        "spillAnchorFormula": "=TRANSPOSE(Data!A2:C5)",
+        "spillValues": [
+          [
+            "A",
+            "B",
+            "C",
+            "D",
+            null,
+            null
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            null,
+            null
+          ],
+          [
+            10,
+            20,
+            30,
+            40,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "dataValues": [
+          [
+            "Item",
+            "Qty",
+            "Price",
+            null
+          ],
+          [
+            "A",
+            1,
+            10,
+            null
+          ],
+          [
+            "B",
+            2,
+            20,
+            null
+          ],
+          [
+            "C",
+            3,
+            30,
+            null
+          ],
+          [
+            "D",
+            4,
+            40,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "expectedFinal": {
+        "qtyFormula": "=SUM(Data!B2:B5)",
+        "priceFormula": "=SUM(Data!C2:C5)",
+        "spillAnchorFormula": "=TRANSPOSE(Data!A2:C5)",
+        "dataValues": [
+          [
+            "Item",
+            "Qty",
+            "Price",
+            null
+          ],
+          [
+            "A",
+            1,
+            10,
+            null
+          ],
+          [
+            "B",
+            2,
+            20,
+            null
+          ],
+          [
+            "X",
+            10,
+            100,
+            null
+          ],
+          [
+            "D",
+            4,
+            40,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "spillValues": [
+          [
+            "A",
+            "B",
+            "X",
+            "D",
+            null,
+            null
+          ],
+          [
+            1,
+            2,
+            10,
+            4,
+            null,
+            null
+          ],
+          [
+            10,
+            20,
+            100,
+            40,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    }
+  ]
+}

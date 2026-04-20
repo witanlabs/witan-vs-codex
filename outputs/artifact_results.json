@@ -1,0 +1,271 @@
+{
+  "generatedAt": "2026-04-20T12:01:22.354Z",
+  "repoRoot": "/Users/nuno/dev/witan-vs-codex",
+  "outputRoot": "/Users/nuno/dev/witan-vs-codex/outputs",
+  "results": [
+    {
+      "name": "case2",
+      "status": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case2_codex.xlsx",
+      "fixture": "fixtures/circular.xlsx",
+      "artifact": {
+        "bonusRate": 0.2,
+        "profit": 54545.45454,
+        "bonus": 5454.545454,
+        "netIncome": 38181.818178
+      },
+      "expected": {
+        "bonusRate": 0.2,
+        "profit": 50000,
+        "bonus": 10000,
+        "netIncome": 35000
+      }
+    },
+    {
+      "name": "case3",
+      "status": "error",
+      "error": "FileContainsCorruptedData",
+      "stack": [
+        "   at System.IO.Packaging.ZipPackage..ctor(Stream , FileMode , FileAccess )",
+        "   at System.IO.Packaging.Package.Open(Stream , FileMode , FileAccess )",
+        "   at DocumentFormat.OpenXml.Features.StreamPackageFeature.InitializePackage(Nullable`1 , Nullable`1 )",
+        "   at DocumentFormat.OpenXml.Features.StreamPackageFeature..ctor(Stream , PackageOpenMode , Boolean )",
+        "   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[SpreadsheetDocument](IPackageFactory`1 , Stream , PackageOpenMode )",
+        "   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[SpreadsheetDocument](IPackageFactory`1 , Stream , Boolean )",
+        "   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream , Boolean , OpenSettings )",
+        "   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream , Boolean )"
+      ]
+    },
+    {
+      "name": "case4",
+      "status": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case4_codex.xlsx",
+      "fixture": "fixtures/review.xlsx",
+      "artifact": {
+        "before": [
+          {
+            "id": "{41BFF466-8DFE-4C62-8EB0-C9936ADC79D8}",
+            "sheet": "Data",
+            "address": "B2",
+            "status": 1,
+            "resolvedAt": null,
+            "resolvedBy": null,
+            "comments": [
+              {
+                "authorId": "{C7C85389-4F5E-427B-B1A5-DAACA6FAB53A}",
+                "author": "Reviewer A",
+                "text": "Initial balance confirmed",
+                "createdAt": "2026-04-20T10:39:57.3587693Z"
+              }
+            ]
+          },
+          {
+            "id": "{8F571583-47F0-4151-8F7D-7DC48669ECC3}",
+            "sheet": "Data",
+            "address": "C2",
+            "status": 1,
+            "resolvedAt": null,
+            "resolvedBy": null,
+            "comments": [
+              {
+                "authorId": "{35053FFC-4F94-47F2-AEF7-F16911AED4FC}",
+                "author": "Reviewer B",
+                "text": "Needs follow-up on Q3 close",
+                "createdAt": "2026-04-20T10:39:57.3588477Z"
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "id": "{41BFF466-8DFE-4C62-8EB0-C9936ADC79D8}",
+            "sheet": "Data",
+            "address": "B2",
+            "status": 1,
+            "resolvedAt": null,
+            "resolvedBy": null,
+            "comments": [
+              {
+                "authorId": "{C7C85389-4F5E-427B-B1A5-DAACA6FAB53A}",
+                "author": "Reviewer A",
+                "text": "Initial balance confirmed",
+                "createdAt": "2026-04-20T10:39:57.3587693Z"
+              }
+            ]
+          },
+          {
+            "id": "{8F571583-47F0-4151-8F7D-7DC48669ECC3}",
+            "sheet": "Data",
+            "address": "C2",
+            "status": 1,
+            "resolvedAt": null,
+            "resolvedBy": null,
+            "comments": [
+              {
+                "authorId": "{35053FFC-4F94-47F2-AEF7-F16911AED4FC}",
+                "author": "Reviewer B",
+                "text": "Needs follow-up on Q3 close",
+                "createdAt": "2026-04-20T10:39:57.3588477Z"
+              }
+            ]
+          },
+          {
+            "id": "uvg76j",
+            "sheet": "Data",
+            "address": "B3",
+            "status": 2,
+            "resolvedAt": "2026-04-20T12:01:22.169Z",
+            "resolvedBy": "Auditor",
+            "comments": [
+              {
+                "authorId": "{E3CDF5A5-8F62-4FB2-9E5B-BD2C48D1B6A5}",
+                "author": "Auditor",
+                "text": "Verified against ledger",
+                "createdAt": "2026-04-20T12:01:22.166Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "addresses": [
+          "B2",
+          "C2",
+          "B3"
+        ],
+        "threadCount": 3
+      }
+    },
+    {
+      "name": "case5",
+      "status": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case5_codex.xlsx",
+      "fixture": "fixtures/report.xlsx",
+      "artifact": {
+        "values": [
+          "Food",
+          "Rent",
+          "Supplies",
+          "Travel",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": [
+          "=UNIQUE(_xlfn._xlws.FILTER(Raw!A2:A13, Raw!B2:B13>0))",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "expected": {
+        "values": [
+          "Food",
+          "Rent",
+          "Supplies",
+          "Travel"
+        ]
+      }
+    },
+    {
+      "name": "case7",
+      "status": "ok",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case7_codex.xlsx",
+      "fixture": "fixtures/report.xlsx",
+      "artifact": {
+        "values": [
+          [
+            "Unique pos cats",
+            null,
+            "Count",
+            "Food matches",
+            "Joined"
+          ],
+          [
+            "Food",
+            null,
+            1,
+            0,
+            "Error: #NAME?"
+          ],
+          [
+            "Rent",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Supplies",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Travel",
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "formulas": [
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "=UNIQUE(_xlfn._xlws.FILTER(Raw!A2:A13, Raw!B2:B13>0))",
+            "",
+            "=COUNTA(Summary!D2#)",
+            "=COUNTIF(Summary!D2#, \"Food\")",
+            "=TEXTJOIN(\", \", TRUE, Summary!D2#)"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "expected": {
+        "spillValues": [
+          "Food",
+          "Rent",
+          "Supplies",
+          "Travel"
+        ],
+        "count": 4,
+        "foodMatches": 1,
+        "joined": "Food, Rent, Supplies, Travel"
+      }
+    }
+  ]
+}

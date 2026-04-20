@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-04-20T14:13:49.589Z",
+  "repoRoot": "/Users/nuno/dev/witan-vs-codex",
+  "results": [
+    {
+      "name": "case10",
+      "status": "ok",
+      "fixture": "fixtures/case10_formula_fixture.xlsx",
+      "outputPath": "/Users/nuno/dev/witan-vs-codex/outputs/case10_codex.xlsx",
+      "before": [
+        {
+          "key": "text_multisection_accounting",
+          "label": "TEXT multi-section accounting",
+          "expected": "($1,234.57)",
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "text_conditional_percent_sections",
+          "label": "TEXT conditional percent sections",
+          "expected": "37.5%",
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "ref_3d_sum",
+          "label": "3D SUM",
+          "expected": 60,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "offset_sum",
+          "label": "OFFSET SUM",
+          "expected": 10,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "indirect_sum",
+          "label": "INDIRECT SUM",
+          "expected": 10,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "map_double_sum",
+          "label": "MAP double SUM",
+          "expected": 20,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "reduce_square_sum",
+          "label": "REDUCE square SUM",
+          "expected": 30,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "let_sumproduct",
+          "label": "LET qty*price SUM",
+          "expected": 300,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "xlookup_price_c",
+          "label": "XLOOKUP price for C",
+          "expected": 30,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "index_xmatch_price_d",
+          "label": "INDEX/XMATCH price for D",
+          "expected": 40,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "textjoin_map",
+          "label": "TEXTJOIN(MAP(...))",
+          "expected": "A:1,B:2,C:3,D:4",
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "sumproduct_filtered_qty",
+          "label": "SUMPRODUCT filtered qty",
+          "expected": 9,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "sequence_sum",
+          "label": "SUM(SEQUENCE(3))",
+          "expected": 6,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "byrow_sum",
+          "label": "SUM(BYROW(...))",
+          "expected": 110,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "choosecols_sum_qty",
+          "label": "SUM(CHOOSECOLS(...))",
+          "expected": 10,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "take_sum_first2",
+          "label": "SUM(TAKE(...,2))",
+          "expected": 3,
+          "formula": "",
+          "value": null
+        },
+        {
+          "key": "drop_sum_last2",
+          "label": "SUM(DROP(...,2))",
+          "expected": 7,
+          "formula": "",
+          "value": null
+        }
+      ],
+      "after": [
+        {
+          "key": "text_multisection_accounting",
+          "label": "TEXT multi-section accounting",
+          "expected": "($1,234.57)",
+          "formula": "=TEXT(-1234.567,\"[Green]$#,##0.00;[Red]($#,##0.00);0.00\")",
+          "value": "($1,234.57)"
+        },
+        {
+          "key": "text_conditional_percent_sections",
+          "label": "TEXT conditional percent sections",
+          "expected": "37.5%",
+          "formula": "=TEXT(0.375,\"[>=1]0.0%;[Red](0.0%);0.0%\")",
+          "value": "(37.5%)"
+        },
+        {
+          "key": "ref_3d_sum",
+          "label": "3D SUM",
+          "expected": 60,
+          "formula": "=SUM(Jan:Mar!B2)",
+          "value": "#VALUE!"
+        },
+        {
+          "key": "offset_sum",
+          "label": "OFFSET SUM",
+          "expected": 10,
+          "formula": "=SUM(OFFSET(Data!B2,0,0,4,1))",
+          "value": "OFFSET is not implemented. reference=1, rows=0, cols=0, height=4, width=1"
+        },
+        {
+          "key": "indirect_sum",
+          "label": "INDIRECT SUM",
+          "expected": 10,
+          "formula": "=SUM(INDIRECT(Config!B1&\"!\"&Config!B2))",
+          "value": "INDIRECT is not implemented. refText=Data!B2:B5, a1=undefined"
+        },
+        {
+          "key": "map_double_sum",
+          "label": "MAP double SUM",
+          "expected": 20,
+          "formula": "=SUM(MAP(Data!B2:B5,LAMBDA(x,x*2)))",
+          "value": "MAP is not implemented. array=1,2,3,4, lambdaOrArray2=Error: #VALUE!, rest.length=0"
+        },
+        {
+          "key": "reduce_square_sum",
+          "label": "REDUCE square SUM",
+          "expected": 30,
+          "formula": "=REDUCE(0,Data!B2:B5,LAMBDA(a,x,a+x^2))",
+          "value": "REDUCE is not implemented. initialValue=0, array=1,2,3,4, functionParam=Error: #VALUE!"
+        },
+        {
+          "key": "let_sumproduct",
+          "label": "LET qty*price SUM",
+          "expected": 300,
+          "formula": "=LET(q,Data!B2:B5,p,Data!C2:C5,SUM(q*p))",
+          "value": 300
+        },
+        {
+          "key": "xlookup_price_c",
+          "label": "XLOOKUP price for C",
+          "expected": 30,
+          "formula": "=XLOOKUP(\"C\",Data!A2:A5,Data!C2:C5)",
+          "value": 30
+        },
+        {
+          "key": "index_xmatch_price_d",
+          "label": "INDEX/XMATCH price for D",
+          "expected": 40,
+          "formula": "=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))",
+          "value": 40
+        },
+        {
+          "key": "textjoin_map",
+          "label": "TEXTJOIN(MAP(...))",
+          "expected": "A:1,B:2,C:3,D:4",
+          "formula": "=TEXTJOIN(\",\",TRUE,MAP(Data!A2:A5,Data!B2:B5,LAMBDA(item,qty,item&\":\"&qty)))",
+          "value": "Error: MAP is not implemented. array=A,B,C,D, lambdaOrArray2=1,2,3,4, rest.length=1"
+        },
+        {
+          "key": "sumproduct_filtered_qty",
+          "label": "SUMPRODUCT filtered qty",
+          "expected": 9,
+          "formula": "=SUMPRODUCT((Data!C2:C5>15)*Data!B2:B5)",
+          "value": 9
+        },
+        {
+          "key": "sequence_sum",
+          "label": "SUM(SEQUENCE(3))",
+          "expected": 6,
+          "formula": "=SUM(SEQUENCE(3))",
+          "value": 6
+        },
+        {
+          "key": "byrow_sum",
+          "label": "SUM(BYROW(...))",
+          "expected": 110,
+          "formula": "=SUM(BYROW(Data!B2:C5,LAMBDA(r,SUM(r))))",
+          "value": 110
+        },
+        {
+          "key": "choosecols_sum_qty",
+          "label": "SUM(CHOOSECOLS(...))",
+          "expected": 10,
+          "formula": "=SUM(CHOOSECOLS(Data!B2:C5,1))",
+          "value": 10
+        },
+        {
+          "key": "take_sum_first2",
+          "label": "SUM(TAKE(...,2))",
+          "expected": 3,
+          "formula": "=SUM(TAKE(Data!B2:B5,2))",
+          "value": 3
+        },
+        {
+          "key": "drop_sum_last2",
+          "label": "SUM(DROP(...,2))",
+          "expected": 7,
+          "formula": "=SUM(DROP(Data!B2:B5,2))",
+          "value": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,923 @@
+{
+  "validatedAt": "2026-04-20T12:41:50.806419+00:00",
+  "results": [
+    {
+      "case": "case8",
+      "variant": "fixture",
+      "path": "/Users/nuno/dev/witan-vs-codex/fixtures/case8_rename_fixture.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Data",
+          "Summary"
+        ],
+        "summary": {
+          "B2": {
+            "value": 6.0,
+            "formula": "=SUM(Data!B2:B4)"
+          },
+          "B3": {
+            "value": 140.0,
+            "formula": "=SUMPRODUCT(Data!B2:B4, Data!C2:C4)"
+          },
+          "D2:F4": {
+            "D2": {
+              "value": "A",
+              "formula": "=TRANSPOSE(Data!A2:C4)"
+            },
+            "E2": {
+              "value": "B",
+              "formula": ""
+            },
+            "F2": {
+              "value": "C",
+              "formula": ""
+            },
+            "D3": {
+              "value": 1.0,
+              "formula": ""
+            },
+            "E3": {
+              "value": 2.0,
+              "formula": ""
+            },
+            "F3": {
+              "value": 3.0,
+              "formula": ""
+            },
+            "D4": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "E4": {
+              "value": 20.0,
+              "formula": ""
+            },
+            "F4": {
+              "value": 30.0,
+              "formula": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case8",
+      "variant": "codex",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case8_codex.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Renamed",
+          "Summary"
+        ],
+        "summary": {
+          "B2": {
+            "value": null,
+            "formula": "=SUM(Data!B2:B4)"
+          },
+          "B3": {
+            "value": null,
+            "formula": "=SUMPRODUCT(Data!B2:B4, Data!C2:C4)"
+          },
+          "D2:F4": {
+            "D2": {
+              "value": null,
+              "formula": "=TRANSPOSE(Data!A2:C4)"
+            },
+            "E2": {
+              "value": null,
+              "formula": ""
+            },
+            "F2": {
+              "value": null,
+              "formula": ""
+            },
+            "D3": {
+              "value": null,
+              "formula": ""
+            },
+            "E3": {
+              "value": null,
+              "formula": ""
+            },
+            "F3": {
+              "value": null,
+              "formula": ""
+            },
+            "D4": {
+              "value": null,
+              "formula": ""
+            },
+            "E4": {
+              "value": null,
+              "formula": ""
+            },
+            "F4": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case8",
+      "variant": "witan",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case8_witan.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Renamed",
+          "Summary"
+        ],
+        "summary": {
+          "B2": {
+            "value": 6.0,
+            "formula": "=SUM(Renamed!B2:B4)"
+          },
+          "B3": {
+            "value": 140.0,
+            "formula": "=SUMPRODUCT(Renamed!B2:B4, Renamed!C2:C4)"
+          },
+          "D2:F4": {
+            "D2": {
+              "value": "A",
+              "formula": "=TRANSPOSE(Renamed!A2:C4)"
+            },
+            "E2": {
+              "value": "B",
+              "formula": ""
+            },
+            "F2": {
+              "value": "C",
+              "formula": ""
+            },
+            "D3": {
+              "value": 1.0,
+              "formula": ""
+            },
+            "E3": {
+              "value": 2.0,
+              "formula": ""
+            },
+            "F3": {
+              "value": 3.0,
+              "formula": ""
+            },
+            "D4": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "E4": {
+              "value": 20.0,
+              "formula": ""
+            },
+            "F4": {
+              "value": 30.0,
+              "formula": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case9",
+      "variant": "fixture",
+      "path": "/Users/nuno/dev/witan-vs-codex/fixtures/case9_shift_fixture.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Data",
+          "Summary"
+        ],
+        "data": {
+          "A1:D6": {
+            "A1": {
+              "value": "Item",
+              "formula": "Item"
+            },
+            "B1": {
+              "value": "Qty",
+              "formula": "Qty"
+            },
+            "C1": {
+              "value": "Price",
+              "formula": "Price"
+            },
+            "D1": {
+              "value": null,
+              "formula": ""
+            },
+            "A2": {
+              "value": "A",
+              "formula": "A"
+            },
+            "B2": {
+              "value": 1.0,
+              "formula": "1"
+            },
+            "C2": {
+              "value": 10.0,
+              "formula": "10"
+            },
+            "D2": {
+              "value": null,
+              "formula": ""
+            },
+            "A3": {
+              "value": "B",
+              "formula": "B"
+            },
+            "B3": {
+              "value": 2.0,
+              "formula": "2"
+            },
+            "C3": {
+              "value": 20.0,
+              "formula": "20"
+            },
+            "D3": {
+              "value": null,
+              "formula": ""
+            },
+            "A4": {
+              "value": "C",
+              "formula": "C"
+            },
+            "B4": {
+              "value": 3.0,
+              "formula": "3"
+            },
+            "C4": {
+              "value": 30.0,
+              "formula": "30"
+            },
+            "D4": {
+              "value": null,
+              "formula": ""
+            },
+            "A5": {
+              "value": "D",
+              "formula": "D"
+            },
+            "B5": {
+              "value": 4.0,
+              "formula": "4"
+            },
+            "C5": {
+              "value": 40.0,
+              "formula": "40"
+            },
+            "D5": {
+              "value": null,
+              "formula": ""
+            },
+            "A6": {
+              "value": null,
+              "formula": ""
+            },
+            "B6": {
+              "value": null,
+              "formula": ""
+            },
+            "C6": {
+              "value": null,
+              "formula": ""
+            },
+            "D6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        },
+        "summary": {
+          "B2": {
+            "value": 10.0,
+            "formula": "=SUM(Data!B2:B5)"
+          },
+          "B3": {
+            "value": 100.0,
+            "formula": "=SUM(Data!C2:C5)"
+          },
+          "E2:J6": {
+            "E2": {
+              "value": "A",
+              "formula": "=TRANSPOSE(Data!A2:C5)"
+            },
+            "F2": {
+              "value": "B",
+              "formula": ""
+            },
+            "G2": {
+              "value": "C",
+              "formula": ""
+            },
+            "H2": {
+              "value": "D",
+              "formula": ""
+            },
+            "I2": {
+              "value": null,
+              "formula": ""
+            },
+            "J2": {
+              "value": null,
+              "formula": ""
+            },
+            "E3": {
+              "value": 1.0,
+              "formula": ""
+            },
+            "F3": {
+              "value": 2.0,
+              "formula": ""
+            },
+            "G3": {
+              "value": 3.0,
+              "formula": ""
+            },
+            "H3": {
+              "value": 4.0,
+              "formula": ""
+            },
+            "I3": {
+              "value": null,
+              "formula": ""
+            },
+            "J3": {
+              "value": null,
+              "formula": ""
+            },
+            "E4": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "F4": {
+              "value": 20.0,
+              "formula": ""
+            },
+            "G4": {
+              "value": 30.0,
+              "formula": ""
+            },
+            "H4": {
+              "value": 40.0,
+              "formula": ""
+            },
+            "I4": {
+              "value": null,
+              "formula": ""
+            },
+            "J4": {
+              "value": null,
+              "formula": ""
+            },
+            "E5": {
+              "value": null,
+              "formula": ""
+            },
+            "F5": {
+              "value": null,
+              "formula": ""
+            },
+            "G5": {
+              "value": null,
+              "formula": ""
+            },
+            "H5": {
+              "value": null,
+              "formula": ""
+            },
+            "I5": {
+              "value": null,
+              "formula": ""
+            },
+            "J5": {
+              "value": null,
+              "formula": ""
+            },
+            "E6": {
+              "value": null,
+              "formula": ""
+            },
+            "F6": {
+              "value": null,
+              "formula": ""
+            },
+            "G6": {
+              "value": null,
+              "formula": ""
+            },
+            "H6": {
+              "value": null,
+              "formula": ""
+            },
+            "I6": {
+              "value": null,
+              "formula": ""
+            },
+            "J6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case9",
+      "variant": "codex",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case9_codex.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Data",
+          "Summary"
+        ],
+        "data": {
+          "A1:D6": {
+            "A1": {
+              "value": "Item",
+              "formula": "Item"
+            },
+            "B1": {
+              "value": "Qty",
+              "formula": "Qty"
+            },
+            "C1": {
+              "value": "Price",
+              "formula": "Price"
+            },
+            "D1": {
+              "value": null,
+              "formula": ""
+            },
+            "A2": {
+              "value": "A",
+              "formula": "A"
+            },
+            "B2": {
+              "value": 1.0,
+              "formula": "1"
+            },
+            "C2": {
+              "value": 10.0,
+              "formula": "10"
+            },
+            "D2": {
+              "value": null,
+              "formula": ""
+            },
+            "A3": {
+              "value": "B",
+              "formula": "B"
+            },
+            "B3": {
+              "value": 2.0,
+              "formula": "2"
+            },
+            "C3": {
+              "value": 20.0,
+              "formula": "20"
+            },
+            "D3": {
+              "value": null,
+              "formula": ""
+            },
+            "A4": {
+              "value": "C",
+              "formula": "C"
+            },
+            "B4": {
+              "value": 3.0,
+              "formula": "3"
+            },
+            "C4": {
+              "value": 30.0,
+              "formula": "30"
+            },
+            "D4": {
+              "value": null,
+              "formula": ""
+            },
+            "A5": {
+              "value": "D",
+              "formula": "D"
+            },
+            "B5": {
+              "value": 4.0,
+              "formula": "4"
+            },
+            "C5": {
+              "value": 40.0,
+              "formula": "40"
+            },
+            "D5": {
+              "value": null,
+              "formula": ""
+            },
+            "A6": {
+              "value": null,
+              "formula": ""
+            },
+            "B6": {
+              "value": null,
+              "formula": ""
+            },
+            "C6": {
+              "value": null,
+              "formula": ""
+            },
+            "D6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        },
+        "summary": {
+          "B2": {
+            "value": 10.0,
+            "formula": "=SUM(Data!B2:B5)"
+          },
+          "B3": {
+            "value": 100.0,
+            "formula": "=SUM(Data!C2:C5)"
+          },
+          "E2:J6": {
+            "E2": {
+              "value": "A",
+              "formula": "=TRANSPOSE(Data!A2:C5)"
+            },
+            "F2": {
+              "value": "B",
+              "formula": ""
+            },
+            "G2": {
+              "value": "C",
+              "formula": ""
+            },
+            "H2": {
+              "value": "D",
+              "formula": ""
+            },
+            "I2": {
+              "value": null,
+              "formula": ""
+            },
+            "J2": {
+              "value": null,
+              "formula": ""
+            },
+            "E3": {
+              "value": 1.0,
+              "formula": ""
+            },
+            "F3": {
+              "value": 2.0,
+              "formula": ""
+            },
+            "G3": {
+              "value": 3.0,
+              "formula": ""
+            },
+            "H3": {
+              "value": 4.0,
+              "formula": ""
+            },
+            "I3": {
+              "value": null,
+              "formula": ""
+            },
+            "J3": {
+              "value": null,
+              "formula": ""
+            },
+            "E4": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "F4": {
+              "value": 20.0,
+              "formula": ""
+            },
+            "G4": {
+              "value": 30.0,
+              "formula": ""
+            },
+            "H4": {
+              "value": 40.0,
+              "formula": ""
+            },
+            "I4": {
+              "value": null,
+              "formula": ""
+            },
+            "J4": {
+              "value": null,
+              "formula": ""
+            },
+            "E5": {
+              "value": null,
+              "formula": ""
+            },
+            "F5": {
+              "value": null,
+              "formula": ""
+            },
+            "G5": {
+              "value": null,
+              "formula": ""
+            },
+            "H5": {
+              "value": null,
+              "formula": ""
+            },
+            "I5": {
+              "value": null,
+              "formula": ""
+            },
+            "J5": {
+              "value": null,
+              "formula": ""
+            },
+            "E6": {
+              "value": null,
+              "formula": ""
+            },
+            "F6": {
+              "value": null,
+              "formula": ""
+            },
+            "G6": {
+              "value": null,
+              "formula": ""
+            },
+            "H6": {
+              "value": null,
+              "formula": ""
+            },
+            "I6": {
+              "value": null,
+              "formula": ""
+            },
+            "J6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "case9",
+      "variant": "witan",
+      "path": "/Users/nuno/dev/witan-vs-codex/outputs/case9_witan.xlsx",
+      "status": "ok",
+      "excel": {
+        "opened": true,
+        "sheets": [
+          "Data",
+          "Summary"
+        ],
+        "data": {
+          "A1:D6": {
+            "A1": {
+              "value": "Item",
+              "formula": "Item"
+            },
+            "B1": {
+              "value": "Qty",
+              "formula": "Qty"
+            },
+            "C1": {
+              "value": "Price",
+              "formula": "Price"
+            },
+            "D1": {
+              "value": null,
+              "formula": ""
+            },
+            "A2": {
+              "value": "A",
+              "formula": "A"
+            },
+            "B2": {
+              "value": 1.0,
+              "formula": "1"
+            },
+            "C2": {
+              "value": 10.0,
+              "formula": "10"
+            },
+            "D2": {
+              "value": null,
+              "formula": ""
+            },
+            "A3": {
+              "value": "B",
+              "formula": "B"
+            },
+            "B3": {
+              "value": 2.0,
+              "formula": "2"
+            },
+            "C3": {
+              "value": 20.0,
+              "formula": "20"
+            },
+            "D3": {
+              "value": null,
+              "formula": ""
+            },
+            "A4": {
+              "value": "X",
+              "formula": "X"
+            },
+            "B4": {
+              "value": 10.0,
+              "formula": "10"
+            },
+            "C4": {
+              "value": 100.0,
+              "formula": "100"
+            },
+            "D4": {
+              "value": null,
+              "formula": ""
+            },
+            "A5": {
+              "value": "D",
+              "formula": "D"
+            },
+            "B5": {
+              "value": 4.0,
+              "formula": "4"
+            },
+            "C5": {
+              "value": 40.0,
+              "formula": "40"
+            },
+            "D5": {
+              "value": null,
+              "formula": ""
+            },
+            "A6": {
+              "value": null,
+              "formula": ""
+            },
+            "B6": {
+              "value": null,
+              "formula": ""
+            },
+            "C6": {
+              "value": null,
+              "formula": ""
+            },
+            "D6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        },
+        "summary": {
+          "B2": {
+            "value": 17.0,
+            "formula": "=SUM(Data!B2:B5)"
+          },
+          "B3": {
+            "value": 170.0,
+            "formula": "=SUM(Data!C2:C5)"
+          },
+          "E2:J6": {
+            "E2": {
+              "value": "A",
+              "formula": "=TRANSPOSE(Data!A2:C5)"
+            },
+            "F2": {
+              "value": "B",
+              "formula": ""
+            },
+            "G2": {
+              "value": "X",
+              "formula": ""
+            },
+            "H2": {
+              "value": "D",
+              "formula": ""
+            },
+            "I2": {
+              "value": null,
+              "formula": ""
+            },
+            "J2": {
+              "value": null,
+              "formula": ""
+            },
+            "E3": {
+              "value": 1.0,
+              "formula": ""
+            },
+            "F3": {
+              "value": 2.0,
+              "formula": ""
+            },
+            "G3": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "H3": {
+              "value": 4.0,
+              "formula": ""
+            },
+            "I3": {
+              "value": null,
+              "formula": ""
+            },
+            "J3": {
+              "value": null,
+              "formula": ""
+            },
+            "E4": {
+              "value": 10.0,
+              "formula": ""
+            },
+            "F4": {
+              "value": 20.0,
+              "formula": ""
+            },
+            "G4": {
+              "value": 100.0,
+              "formula": ""
+            },
+            "H4": {
+              "value": 40.0,
+              "formula": ""
+            },
+            "I4": {
+              "value": null,
+              "formula": ""
+            },
+            "J4": {
+              "value": null,
+              "formula": ""
+            },
+            "E5": {
+              "value": null,
+              "formula": ""
+            },
+            "F5": {
+              "value": null,
+              "formula": ""
+            },
+            "G5": {
+              "value": null,
+              "formula": ""
+            },
+            "H5": {
+              "value": null,
+              "formula": ""
+            },
+            "I5": {
+              "value": null,
+              "formula": ""
+            },
+            "J5": {
+              "value": null,
+              "formula": ""
+            },
+            "E6": {
+              "value": null,
+              "formula": ""
+            },
+            "F6": {
+              "value": null,
+              "formula": ""
+            },
+            "G6": {
+              "value": null,
+              "formula": ""
+            },
+            "H6": {
+              "value": null,
+              "formula": ""
+            },
+            "I6": {
+              "value": null,
+              "formula": ""
+            },
+            "J6": {
+              "value": null,
+              "formula": ""
+            }
+          }
+        }
+      }
+    }
+  ]
+}
