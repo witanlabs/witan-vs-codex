@@ -1,5 +1,5 @@
 {
-  "validatedAt": "2026-04-20T14:14:16.953007+00:00",
+  "validatedAt": "2026-04-20T16:00:10.001286+00:00",
   "results": [
     {
       "case": "case10",
@@ -161,7 +161,7 @@
       "variant": "codex",
       "path": "/Users/nuno/dev/witan-vs-codex/outputs/case10_codex.xlsx",
       "status": "error",
-      "error": "Command failed:\n\t\tOSERROR: -50\n\t\tMESSAGE: Parameter error.\n\t\tCOMMAND: app('/Applications/Microsoft Excel.app', newinstance=(0, 142288810)).open_workbook(workbook_file_name='/Users/nuno/dev/witan-vs-codex/outputs/case10_codex.xlsx', update_links=k.do_not_update_links, read_only=None, format=None, password=None, write_reserved_password=None, ignore_read_only_recommended=None, origin=None, delimiter=None, editable=None, notify=None, converter=None, add_to_mru=None, timeout=-1)"
+      "error": "Command failed:\n\t\tOSERROR: -50\n\t\tMESSAGE: Parameter error.\n\t\tCOMMAND: app('/Applications/Microsoft Excel.app', newinstance=(0, 143296672)).open_workbook(workbook_file_name='/Users/nuno/dev/witan-vs-codex/outputs/case10_codex.xlsx', update_links=k.do_not_update_links, read_only=None, format=None, password=None, write_reserved_password=None, ignore_read_only_recommended=None, origin=None, delimiter=None, editable=None, notify=None, converter=None, add_to_mru=None, timeout=-1)"
     },
     {
       "case": "case10",
@@ -255,9 +255,9 @@
             "row": 11,
             "label": "INDEX/XMATCH price for D",
             "expected": 40.0,
-            "actual": null,
+            "actual": 40.0,
             "formula": "=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))",
-            "matchesExpected": false
+            "matchesExpected": true
           },
           {
             "row": 12,

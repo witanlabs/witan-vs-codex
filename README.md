@@ -7,7 +7,7 @@
 > comprehensive feature list or bug list of either tool; just some concrete
 > cases reproduced end-to-end.
 
-All cases tested 2026-04-20 against witan CLI 0.9.0 (API v2.19.0),
+All cases tested 2026-04-20 against witan CLI 0.9.0 (API v2.20.0),
 `@oai/artifact-tool` 2.6.9, xlwings 0.35.1, and Microsoft Excel for Mac
 (macOS Darwin 25.3.0). Excel is used only as ground truth via xlwings
 automation. Codex workbook edits are exercised through the bundled Node runtime.
@@ -31,7 +31,7 @@ repo.
 | 7 | Write formulas that consume a spill reference (`A1#`) | ✗ internal results already wrong; exported file is not Excel-openable | ✓ computes spill consumers correctly |
 | 8 | Rename a sheet referenced by formulas | ✗ formulas still say `Data!…` after rename | ✓ every reference rewritten |
 | 9 | Insert / delete rows and columns used by formulas | ✗ ops are unimplemented; workbook stays unchanged | ✓ formulas and spill shift correctly |
-| 10 | Calculate special formulas (`TEXT`, 3D refs, `OFFSET`, `INDIRECT`, `MAP`, `REDUCE`, etc.) | ✗ multiple wrong in-tool results; exported file is not Excel-openable | ✗ 16/17 right, but `INDEX/XMATCH` still fails |
+| 10 | Calculate special formulas (`TEXT`, 3D refs, `OFFSET`, `INDIRECT`, `MAP`, `REDUCE`, etc.) | ✗ multiple wrong in-tool results; exported file is not Excel-openable | ✓ all 17 values match |
 
 Key: ✓ works · ✗ fails.
 
@@ -53,7 +53,7 @@ Grouped by the *kind* of failure each case surfaces on the Codex side:
 - Codex spreadsheet library: `@oai/artifact-tool 2.6.9`
 - Codex Node runtime: `/Users/nuno/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node`
 - Python launcher: `uv run --with xlwings python <script>`
-- witan CLI: `0.9.0`, production API `v2.19.0`
+- witan CLI: `0.9.0`, production API `v2.20.0`
 - Excel: Microsoft Excel for Mac, automated through xlwings 0.35.1
 - Fixtures built in this repo live in `fixtures/`
 
@@ -322,7 +322,7 @@ Expected final state:
 
 **Verdict**
 - codex — **✗** One complex `TEXT` format works, another picks the wrong format section, several modern or indirection-based functions fail in-tool, and the saved workbook is not Excel-openable.
-- witan — **✗** Gets 16/17 formulas right, but `INDEX/XMATCH` still fails and comes back blank in Excel.
+- witan — **✓** All 17 formulas match in runtime and after Excel open.
 
 **Fixture:** `fixtures/case10_formula_fixture.xlsx`
 
@@ -388,8 +388,4 @@ Expected highlights on `Summary!C2:C18`:
 - Both complex `TEXT` formulas open in Excel with the expected results:
   - `($1,234.57)`
   - `37.5%`
-- 16 of the 17 formulas match the expected value after Excel open.
-- The one miss is `INDEX(Data!C2:C5, XMATCH("D", Data!A2:A5))`:
-  - Witan runtime returns `#VALUE!`
-  - Excel opens `outputs/case10_witan.xlsx`, keeps the formula string in `C11`,
-    but xlwings reads the cell value back as blank
+- All 17 formulas match the expected value after Excel open.

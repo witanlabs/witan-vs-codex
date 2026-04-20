@@ -198,7 +198,7 @@
           "label": "INDEX/XMATCH price for D",
           "expected": 40,
           "formula": "=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))",
-          "value": "#VALUE!"
+          "value": 40
         },
         {
           "key": "textjoin_map",
@@ -250,7 +250,7 @@
           "value": 7
         }
       ],
-      "table": "A1|Formula\tB1|Expected\tC1|Actual\nA2|TEXT multi-section accounting\tB2|($1,234.57)\tC2|($1,234.57)|=TEXT(-1234.567,\"[Green]$#,##0.00;[Red]($#,##0.00);0.00\")\nA3|TEXT conditional percent sections\tB3|37.5%\tC3|37.5%|=TEXT(0.375,\"[\u003e=1]0.0%;[Red](0.0%);0.0%\")\nA4|3D SUM\tB4|60\tC4|60|=SUM(Jan:Mar!B2)\nA5|OFFSET SUM\tB5|10\tC5|10|=SUM(OFFSET(Data!B2,0,0,4,1))\nA6|INDIRECT SUM\tB6|10\tC6|10|=SUM(INDIRECT(Config!B1\u0026\"!\"\u0026Config!B2))\nA7|MAP double SUM\tB7|20\tC7|20|=SUM(MAP(Data!B2:B5,LAMBDA(x,x*2)))\nA8|REDUCE square SUM\tB8|30\tC8|30|=REDUCE(0,Data!B2:B5,LAMBDA(a,x,a+x^2))\nA9|LET qty*price SUM\tB9|300\tC9|300|=LET(q,Data!B2:B5,p,Data!C2:C5,SUM(q*p))\nA10|XLOOKUP price for C\tB10|30\tC10|30|=XLOOKUP(\"C\",Data!A2:A5,Data!C2:C5)\nA11|INDEX/XMATCH price for D\tB11|40\tC11|#VALUE!|=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))\nA12|TEXTJOIN(MAP(...))\tB12|A:1,B:2,C:3,D:4\tC12|A:1,B:2,C:3,D:4|=TEXTJOIN(\",\",TRUE,MAP(Data!A2:A5,Data!B2:B5,LAMBDA(item,qty,item\u0026\":\"\u0026qty)))\nA13|SUMPRODUCT filtered qty\tB13|9\tC13|9|=SUMPRODUCT((Data!C2:C5\u003e15)*Data!B2:B5)\nA14|SUM(SEQUENCE(3))\tB14|6\tC14|6|=SUM(SEQUENCE(3))\nA15|SUM(BYROW(...))\tB15|110\tC15|110|=SUM(BYROW(Data!B2:C5,LAMBDA(r,SUM(r))))\nA16|SUM(CHOOSECOLS(...))\tB16|10\tC16|10|=SUM(CHOOSECOLS(Data!B2:C5,1))\nA17|SUM(TAKE(...,2))\tB17|3\tC17|3|=SUM(TAKE(Data!B2:B5,2))\nA18|SUM(DROP(...,2))\tB18|7\tC18|7|=SUM(DROP(Data!B2:B5,2))"
+      "table": "A1|Formula\tB1|Expected\tC1|Actual\nA2|TEXT multi-section accounting\tB2|($1,234.57)\tC2|($1,234.57)|=TEXT(-1234.567,\"[Green]$#,##0.00;[Red]($#,##0.00);0.00\")\nA3|TEXT conditional percent sections\tB3|37.5%\tC3|37.5%|=TEXT(0.375,\"[\u003e=1]0.0%;[Red](0.0%);0.0%\")\nA4|3D SUM\tB4|60\tC4|60|=SUM(Jan:Mar!B2)\nA5|OFFSET SUM\tB5|10\tC5|10|=SUM(OFFSET(Data!B2,0,0,4,1))\nA6|INDIRECT SUM\tB6|10\tC6|10|=SUM(INDIRECT(Config!B1\u0026\"!\"\u0026Config!B2))\nA7|MAP double SUM\tB7|20\tC7|20|=SUM(MAP(Data!B2:B5,LAMBDA(x,x*2)))\nA8|REDUCE square SUM\tB8|30\tC8|30|=REDUCE(0,Data!B2:B5,LAMBDA(a,x,a+x^2))\nA9|LET qty*price SUM\tB9|300\tC9|300|=LET(q,Data!B2:B5,p,Data!C2:C5,SUM(q*p))\nA10|XLOOKUP price for C\tB10|30\tC10|30|=XLOOKUP(\"C\",Data!A2:A5,Data!C2:C5)\nA11|INDEX/XMATCH price for D\tB11|40\tC11|40|=INDEX(Data!C2:C5,XMATCH(\"D\",Data!A2:A5))\nA12|TEXTJOIN(MAP(...))\tB12|A:1,B:2,C:3,D:4\tC12|A:1,B:2,C:3,D:4|=TEXTJOIN(\",\",TRUE,MAP(Data!A2:A5,Data!B2:B5,LAMBDA(item,qty,item\u0026\":\"\u0026qty)))\nA13|SUMPRODUCT filtered qty\tB13|9\tC13|9|=SUMPRODUCT((Data!C2:C5\u003e15)*Data!B2:B5)\nA14|SUM(SEQUENCE(3))\tB14|6\tC14|6|=SUM(SEQUENCE(3))\nA15|SUM(BYROW(...))\tB15|110\tC15|110|=SUM(BYROW(Data!B2:C5,LAMBDA(r,SUM(r))))\nA16|SUM(CHOOSECOLS(...))\tB16|10\tC16|10|=SUM(CHOOSECOLS(Data!B2:C5,1))\nA17|SUM(TAKE(...,2))\tB17|3\tC17|3|=SUM(TAKE(Data!B2:B5,2))\nA18|SUM(DROP(...,2))\tB18|7\tC18|7|=SUM(DROP(Data!B2:B5,2))"
     }
   },
   "writes_detected": true,
@@ -264,5 +264,5 @@
       "address": "Summary!C2:C18"
     }
   ],
-  "revision_id": "_PiWrMACQFgX1RezYRNv1X1HnZqURvLe"
+  "revision_id": "uqAAYaxvnZsUuU3u30X87qzzq48dA3z9"
 }
